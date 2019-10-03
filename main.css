@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  
+
+  #playArea{
+      border: 2px solid red;
+      margin: 50px;
+      width:600px;
+      height:400px;
+      
+      
+     
+  }
+
+
+  #item{
+      height: 100px;
+      width: 100px;
+      border: 2px solid purple;
+      background-color: purple;
+      position: absolute;
+      top: 200px;
+      left: 300px;
+  }
+
+/*     
+  div {
+    height: 50vh;
+    width: 50vh;
+    background-color: blue;
+    position: absolute;
+    /* top: 25vh; */
+    
+  /* } */
