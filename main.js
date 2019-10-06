@@ -6,8 +6,6 @@ console.log(`starting value ${item.style.left}`);
 console.log (startPosistion - 50);
 let player1Score = 0;
 let player2Score = 0;
-let keepPlaying = true;
-
 
 
 const calculateDistanceToMoveItem = (keyCode, currentPosistion)=>{     
@@ -49,10 +47,9 @@ const onKeyUp = (event) => {
         if (winner) {
             
             scores = countTheScore(newPosition);
-            console.log(scores);
-            alert(`Player 1: ${scores.player1}. Player 2: ${scores.player2} `);
-            
-            //reset the CSS 
+            displayScore(scores);
+            //reset the CSS
+         
             item.style.left = (startPosistion +'px');
 
             //reset the current possition so it matches the CSS
@@ -87,9 +84,12 @@ const countTheScore = (posistion) => {
 }
 
 const displayScore = (scores) => {
-
-    console.log (scores.values);
-    alert (`Player 1: ${scores.player1()}. Player 2: ${scores.player2} `);
+    console.log(scores);
+    myElem = document.getElementById("player-1-score");
+    myElem2 = document.getElementById("player-2-score");
+    myElem.innerHTML = scores.player1
+    myElem2.innerHTML = scores.player2;
     return true;
+    
 }
 
