@@ -1,6 +1,6 @@
 
 const item = document.getElementById("item");
-let startPosistion = 300;
+let startPosistion = 250;
 item.style.left = (startPosistion +'px');
 console.log(`starting value ${item.style.left}`);
 console.log (startPosistion - 50);
