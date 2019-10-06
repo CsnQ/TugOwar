@@ -83,6 +83,7 @@ const countTheScore = (posistion) => {
     return scores;
 }
 
+//writes score into html
 const displayScore = (scores) => {
     console.log(scores);
     myElem = document.getElementById("player-1-score");
