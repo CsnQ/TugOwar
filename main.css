@@ -99,3 +99,7 @@
      border: 2px solid black;
      height: 30px;
  }
+
+ .welcome-message{
+   padding-bottom: 10px;
+ }
