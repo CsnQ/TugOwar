@@ -6,6 +6,9 @@
     box-sizing: border-box;
   }
 
+  h1{
+    font-size: 2em;
+  }
   body {
     background-color: black;
     background-image: radial-gradient(
