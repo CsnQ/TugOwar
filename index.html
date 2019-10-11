@@ -1,29 +1,36 @@
 <!DOCTYPE html>
- <html> 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TugOWar</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="main.css">
-        <script src="main.js" async defer></script>
-    </head>
-    <body>
-        <h1 class="page-title">Tug Of War_</h1>
-    <section class="game-play-area">
-        <div id="playArea" class = "play-area">
-            <div id="item">
-                
-            </div>
-        </div>
-        <section id = "score-board" class = "score-board">
-            <p class="welcome-message">Welcome! start the game by clicking in the play area. Use the left arrow to control Player 1 and the right arrow to control Player 2. To reset the game, refresh the page!</p>
-            <p>Player 1 score: </p> <p id = "player-1-score" class = "player-score player-1-score ">0</p>
-            <p>Player 2 score: </p> <p id = "player-2-score" class = "player-score player-2-score ">0</p>
-        </section>
-        <p><input type="checkbox" id="switch" checked>Power</p>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TugOWar</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" async defer></script>
+  </head>
+  <body>
+    <h1 class="page-title">Tug Of War_</h1>
+    <section class="score">
+      <p>Player 1 score:</p>
+      <p id="player-1-score" class="player-score player-1-score ">0</p>
+      <p>Player 2 score:</p>
+      <p id="player-2-score" class="player-score player-2-score ">0</p>
     </section>
-    </body>
+    <section class="game-play-area">
+      <div id="playArea" class="play-area">
+        <div id="item"></div>
+      </div>
+      <div class="alien-area"></div>
+      <div class="astronaut--area"></div>
+      <section id="score-board" class="score-board">
+        <p class="welcome-message">
+          Welcome! start the game by clicking in the play area. Use the left
+          arrow to control Player 1 and the right arrow to control Player 2. To
+          reset the game, refresh the page!
+        </p>
+      </section>
+    </section>
+  </body>
 </html>

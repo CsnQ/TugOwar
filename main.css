@@ -1,108 +1,119 @@
 /* CRT monitor styling from https://css-tricks.com/old-timey-terminal-styling/ */
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  h1{
-    font-size: 2em;
-  }
-  body {
-    background-color: black;
-    background-image: radial-gradient(
-      rgba(0, 150, 0, 0.75), black 120%
-    );
-    height: 100vh;
-    color: white;
-    font: 1.3rem Inconsolata, monospace;
-    text-shadow: 0 0 5px #C8C8C8;
-        
-    border-radius: 1rem;
-    border: 2rem solid;
-    border-bottom: 3.5rem solid;
-    border-bottom-color: #444343;
-    border-left-color: #444343;
-    border-right-color: #444343;
-    border-top-color: #444343;
+h1 {
+  font-size: 2em;
+}
+body {
+  background-color: black;
+  background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  height: 100vh;
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #c8c8c8;
 
-    box-shadow:
-    inset 0 0 18rem #333232,
-    inset 0 0 3rem #333232,
-    0 0 10rem #333232;
+  height: 90vh;
+  width: 90vw;
+}
 
-    height: 100vh;
-    width: 100vw;
-    }
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90vw;
+  height: 90vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(black, 0.15),
+    rgba(black, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
 
-  body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: repeating-linear-gradient(
-      0deg,
-      rgba(black, 0.15),
-      rgba(black, 0.15) 1px,
-      transparent 1px,
-      transparent 2px
-    );
-  }
+::selection {
+  background: #0080ff;
+  text-shadow: none;
+}
 
-  ::selection {
-    background: #0080FF;
-    text-shadow: none;
-  }
+.game-play-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "alien-area play-area play-area astronaut--area" "alien-area play-area play-area astronaut--area" "score-board score-board score-board score-board";
+}
 
-  .game-play-area {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "play-area play-area play-area score-board score-board";
-  }
+.play-area {
+  grid-area: play-area;
+}
 
-  .play-area { grid-area: play-area; }
+.score-board {
+  grid-area: score-board;
+  margin: 10px;
+}
 
-  .score-board { 
-      grid-area: score-board;
-      margin: auto 0;
-     }
+.score {
+  margin: 10px;
+}
 
-  #playArea{
-      border: 2px solid white;    
-      margin: 50px;
-      width:600px;
-      height:400px;
-      box-shadow: 0 0 5px #C8C8C8;
-      position: relative;
-      display: inline-block;
-      
-         
-  }
+.alien-area {
+  height: 200px;
+  width: 100px;
+  margin-top: 50px;
+  margin-left: 200px;
+  grid-area: alien-area;
+  background-image: url("./img/alien2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
-  #item{
-      height: 100px;
-      width: 100px;
-      border: 2px solid white;
-      background-color: white;
-      box-shadow: 0 0 5px #C8C8C8;
-      display: block;
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      
+.astronaut--area {
+  grid-area: astronaut--area;
+  height: 200px;
+  width: 100px;
+  margin-top: 50px;
+  margin-left: 130px;
+  background-image: url("/img/alien1b.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
-  }
+#playArea {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  margin: 50px;
+  width: 600px;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+}
 
- #switch{
-     justify-content: right;
-     border: 2px solid black;
-     height: 30px;
- }
+#item {
+  height: 50px;
+  width: 80px;
+  background-image: url("./img/output-onlinepngtools3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 5px #c8c8c8;
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
 
- .welcome-message{
-   padding-bottom: 10px;
- }
+#switch {
+  justify-content: right;
+  border: 2px solid black;
+  height: 30px;
+}
+
+.welcome-message {
+  padding-bottom: 10px;
+  position: fixed;
+}

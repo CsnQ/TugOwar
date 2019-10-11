@@ -2,8 +2,6 @@
 const item = document.getElementById("item");
 let startPosistion = 250;
 item.style.left = (startPosistion +'px');
-console.log(`starting value ${item.style.left}`);
-console.log (startPosistion - 50);
 let player1Score = 0;
 let player2Score = 0;
 
@@ -24,9 +22,9 @@ const moveBox = (position) => {
 }
 
 const checkWinner = (position) => {
-    if (position < 50) {
+    if (position <0) {
         return "player1";
-    } else if (position > 540) {
+    } else if (position > 520) {
         return "player2";
     } else {
         return null;
@@ -69,7 +67,7 @@ const onKeyUp = (event) => {
 document.addEventListener('keyup', onKeyUp);
 
 const countTheScore = (posistion) => {
-    if (posistion<50){
+    if (posistion<0){
         player1Score++;
     }else {
         player2Score++;
