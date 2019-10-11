@@ -68,7 +68,7 @@ body::after {
   margin-top: 50px;
   margin-left: 200px;
   grid-area: alien-area;
-  background-image: url("/img/alien2.png");
+  background-image: url("./img/alien2.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -79,7 +79,7 @@ body::after {
   width: 100px;
   margin-top: 50px;
   margin-left: 130px;
-  background-image: url("/img/alien1b.png");
+  background-image: url("./img/alien1b.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
