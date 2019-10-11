@@ -22,9 +22,9 @@ const moveBox = (position) => {
 }
 
 const checkWinner = (position) => {
-    if (position < 45) {
+    if (position <0) {
         return "player1";
-    } else if (position > 540) {
+    } else if (position > 520) {
         return "player2";
     } else {
         return null;
@@ -67,7 +67,7 @@ const onKeyUp = (event) => {
 document.addEventListener('keyup', onKeyUp);
 
 const countTheScore = (posistion) => {
-    if (posistion<45){
+    if (posistion<0){
         player1Score++;
     }else {
         player2Score++;
